@@ -472,6 +472,29 @@ rpm
       pkg:rpm/fedora/curl@7.50.3-1.fc25?arch=i386&distro=fedora-25
       pkg:rpm/centerim@4.22.10-1.el6?arch=i686&epoch=1&distro=fedora-25
 
+snap
+-----
+``snap`` for snap universal linux packages - https://snapcraft.io/:
+
+- The default package repository is https://snapcraft.io/store.
+- The ``namespace`` is the "vendor" name such as "debian" or "ubuntu".
+  It is not case sensitive and must be lowercased.
+- The ``name`` is not case sensitive and must be lowercased.
+- The ``version`` is the revision of the snap.
+- ``arch`` is the qualifiers key for a package architecture.
+- ``version`` is the qualifiers key for a snap version - this is different from the snap revision. It is not always known so the ``version`` component is the snap revision and the ``version`` qualifier is the snap version.
+- ``channel`` is the qualifiers key for a snap channel. The default would be "latest/stable"
+
+The ``snap info`` command can print the ``name``, ``revision``, ``version``  and ``channel`` of a snap package::
+
+    snap info <snap package name>
+
+
+- Examples::
+
+      pkg:snap/ubuntu/lxd@24918?version=5.14-7072c7b&channel=latest/stable&arch=amd64
+
+
 swid
 -----
 ``swid`` for ISO-IEC 19770-2 Software Identification (SWID) tags:
